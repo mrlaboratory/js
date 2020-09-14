@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Javascript</title>
+<link rel="stylesheet" type="text/css" href="https://www.mrlaboratory.com">
+
+<style type="text/css">
+
+#js1{
+text-align:center;
+
+}
+
+#js1 {
+padding:5px;
+color:white;
+background-color:green;
+border:2px solid gray;
+margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+cursor:pointer;
+}
+
+
+button{
+padding:5px;
+color:white;
+background-color:green;
+border:2px solid gray;
+
+}
+
+h2{
+color:white;
+background-color:green;
+padding:5px;
+
+
+}
+</style>
+
+</head>
+<body>
+
+<h1 id="js1"></h1>
+<h2 id="js2"></h2>
+<script>
+document.write("JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions. ");
+</script>
+<br/><br/>
+<button class="button1" type="button" title="JS" onclick="document.write('<h1>Learning Javascript</h1>')">Run</button>
+
+<br/>
+<button type="button" onclick="mijan()">Show more</button>
+<h2 id="js3"></h2>
+
+
+<script>
+var a, b, c;
+a=5;
+b=7;
+c=a+b;
+document.getElementById("js2").innerHTML='Todays date: '+ c;
+</script>
+<script>
+function mijan(){
+document.getElementById("js3").innerHTML='Javascript is object-orientation Language';
+
+}
+
+
+
+</script>
+
+
+<script>
+document.getElementById("js1").innerHTML='Learning Javascript';
+document.getElementById("mijan")
+</script>
+</body>
+</html>
