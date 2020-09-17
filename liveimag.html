@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Code Editor</title>
+<style type="text/css">
+body {
+  margin: 0 auto 0 auto;
+}
+#wrap {
+  margin: 20px auto;
+  text-align: center
+}
+a:link{
+  color: #00ad62;
+  font-size: 200%;
+  font-family:segeo ui, arial;
+  text-decoration:none;
+  font-weight:bold;
+  position:fixed;
+  top:30%;
+  left:10%;
+  transition: all 0.3s ease-out;}
+</style>
+</head>
+
+<input type='file' id="upload" onchange="readURL(this.value)" />
+    <img id="img" src="#" alt="your image" />
+
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+  $('#upload').change(function(){
+    var input = this;
+    var url = $(this).val();
+    var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+    if (input.files && input.files[0]&& (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) 
+     {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+           $('#img').attr('src', e.target.result);
+        }
+       reader.readAsDataURL(input.files[0]);
+    }
+    else
+    {
+      $('#img').attr('src', '/assets/no_preview.png');
+    }
+  });
+
+});
+</script>
+
+
+</body>
+</html>
+
+
+
