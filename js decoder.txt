@@ -1,0 +1,7 @@
+Js Decoder 
+
+obfuscator             https://obfuscator.io/
+Unpacker    http://www.thaoh.net/prettyjs/
+          https://lelinhtinh.github.io/de4js/
+        https://www.thetopsites.net/article/53096376.shtml
+
