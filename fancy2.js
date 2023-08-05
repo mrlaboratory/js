@@ -23,7 +23,7 @@ var fancyText = '';
     $.each(finalRes,function(inx, vl) { 
         $("#copy_"+inx).val(vl);
         
-     // fancyText  +=  '<div class="input-group mb-3"><input type="text" class="form-control text-'+sn+'" value="'+vl+'" id="copy_'+inx+'" readonly="readonly"><div class="input-group-append"><span class="input-group-text copybutton" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-target="#copy_'+inx+'">Copy</span></div></div>';
+     // fancyText  +=  '<div class="input-group mb-2 flex justify-center items-center"><input type="text" class="input input-bordered w-full  text-'+sn+'" value="'+vl+'" id="copy_'+inx+'" readonly="readonly"><div class="input-group-append"><span class="btn btn-primary input-group-text copybutton" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-target="#copy_'+inx+'">Copy</span></div></div>';
       sn++;
     });
     
