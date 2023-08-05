@@ -4,13 +4,24 @@ generateFancy($("#fancytext").val());
 } else {
 generateFancy("Preview Text");
 }*/
-    $(".fancytext").val($(this).val());
+$(document).ready(function() {
+    var $fancyText = $(".fancytext");
     
-    if ($.trim($(this).val()) !== '') {
-        generateFancy($(this).val());
-    } else {
-        generateFancy("Preview Text");
-    }
+    $fancyText.on("input", function() {
+        console.log('test');
+        $fancyText.val($(this).val());
+        
+        if ($.trim($(this).val()) !== '') {
+            generateFancy($(this).val());
+        } else {
+            generateFancy("Preview Text");
+        }
+    });
+    
+    // Trigger the "input" event for the default value
+    $fancyText.trigger("input");
+});
+
 
 $(".fancytext").on("input", function() {
     console.log('test');
