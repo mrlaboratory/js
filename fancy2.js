@@ -5,15 +5,17 @@ generateFancy($("#fancytext").val());
 generateFancy("Preview Text");
 }*/
 
-$(".fancytext").keyup(function() { 
-  console.log('text run ');
-$(".fancytext").val($(this).val());
-if($.trim($(this).val())!='') { 
-generateFancy($(this).val());
-} else {
-generateFancy("Preview Text");
-}
+$(".fancytext").on("input", function() {
+    console.log('test');
+    $(".fancytext").val($(this).val());
+    
+    if ($.trim($(this).val()) !== '') {
+        generateFancy($(this).val());
+    } else {
+        generateFancy("Preview Text");
+    }
 });
+
 var ct = 89;
 function generateFancy(txt) {
 var fancyText = '';
