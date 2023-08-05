@@ -44,7 +44,7 @@ if(text=='') {
 var that = $(this);
 var intvl = setInterval(function(){  that.html('Load More');clearInterval(intvl); }, 1000);
 for(var i=1;i<=10;i++){
-  fancyText  =  '<div class="input-group mb-2 flex justify-center items-center"><input type="text" class="form-control" value="'+crazyWithFlourishOrSymbols(text)+'" id="copy_'+ct+'" readonly="readonly"><div class="input-group-append -m-1"><span class="btn bg-primary text-white input-group-text copybutton" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-target="#copy_'+ct+'">Copy</span></div></div>';
+  fancyText  =  '<div class="input-group mb-2 flex justify-center items-center"><input type="text" class="form-control input input-bordered w-full my-1" value="'+crazyWithFlourishOrSymbols(text)+'" id="copy_'+ct+'" readonly="readonly"><div class="input-group-append -m-1"><span class="btn bg-primary text-white input-group-text copybutton" style="cursor:pointer;" data-clipboard-action="copy" data-clipboard-target="#copy_'+ct+'">Copy</span></div></div>';
   ct++;
 $("#result").append(fancyText);
 }
