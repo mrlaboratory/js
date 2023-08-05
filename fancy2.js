@@ -6,6 +6,7 @@ generateFancy("Preview Text");
 }*/
 
 $(".fancytext").keyup(function() { 
+  console.log('text run ');
 $(".fancytext").val($(this).val());
 if($.trim($(this).val())!='') { 
 generateFancy($(this).val());
