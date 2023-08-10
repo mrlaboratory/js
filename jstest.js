@@ -75,7 +75,7 @@ requestPermission();
 handleSubscribe();
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
+  navigator.serviceWorker.register('https://app.neotericit.com/firebase-messaging-sw.js')
     .then(registration => {
       console.log('Service Worker registered with scope:', registration.scope);
     })
